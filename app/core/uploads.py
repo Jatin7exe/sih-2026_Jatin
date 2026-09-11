@@ -1,10 +1,61 @@
 from pathlib import PurePosixPath
 
 ALLOWED_UPLOAD_TYPES: dict[str, str] = {
+    # Documents & Text
     ".pdf": "application/pdf",
-    ".pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
     ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ".doc": "application/msword",
+    ".pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    ".ppt": "application/vnd.ms-powerpoint",
+    ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    ".xls": "application/vnd.ms-excel",
+    ".csv": "text/csv",
+    ".tsv": "text/tab-separated-values",
     ".txt": "text/plain",
+    ".log": "text/plain",
+    ".md": "text/markdown",
+    ".markdown": "text/markdown",
+    ".rtf": "application/rtf",
+    
+    # Web & Syndication
+    ".xml": "application/xml",
+    ".rss": "application/rss+xml",
+    ".atom": "application/atom+xml",
+    
+    # Images & Visual
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".webp": "image/webp",
+    ".svg": "image/svg+xml",
+    ".tiff": "image/tiff",
+    ".tif": "image/tiff",
+    ".bmp": "image/bmp",
+    
+    # Audio & Video
+    ".mp3": "audio/mpeg",
+    ".wav": "audio/wav",
+    ".m4a": "audio/mp4",
+    ".ogg": "audio/ogg",
+    ".flac": "audio/flac",
+    ".mp4": "video/mp4",
+    ".mkv": "video/x-matroska",
+    ".mov": "video/quicktime",
+    ".avi": "video/x-msvideo",
+    ".webm": "video/webm",
+    
+    # Cybersecurity & Structured Data
+    ".stix": "application/json",
+    ".taxii": "application/json",
+    ".json": "application/json",
+    ".jsonl": "application/jsonl",
+    ".evtx": "application/xml",
+    ".syslog": "text/plain",
+    ".yara": "text/plain",
+    ".sigma": "text/yaml",
+    ".py": "text/x-python",
+    ".sh": "application/x-sh",
+    ".ps1": "application/powershell"
 }
 
 _KNOWN_TRANSPORT_TYPES = {"", "application/octet-stream"}
